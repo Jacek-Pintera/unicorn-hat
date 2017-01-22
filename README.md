@@ -1,50 +1,77 @@
-#Unicorn Hat Python Library & Examples
+![Unicorn HAT/pHAT](unicorn-hat-logo.png)
 
-Here you'll find everything you need to start lighting up your UnicornHat in python.
+Available from Pimoroni:  
+http://shop.pimoroni.com/products/unicorn-hat  
+http://shop.pimoroni.com/products/unicorn-phat
+
+###`unicornhat` Python Library & Examples
+
+Here you'll find everything you need to start lighting up your Unicorn HAT or pHAT using python.
 
 Python users should probably ignore most of this repository and just:
 
-**Full install for beginners:**
+**Full install ( recommended ):**
 
 ```bash
-\curl -sS get.pimoroni.com/unicornhat | bash
+\curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
-**Install for Python 3 ( idle3 ):**
+**Install for Python 3:**
 
 ```bash
 sudo apt-get install python3-pip python3-dev
-sudo pip-3.2 install unicornhat
+sudo pip3 install unicornhat
 ```
 
-**Install for Python 2 ( idle ):**
+**Install for Python 2:**
 
 ```bash
 sudo apt-get install python-pip python-dev
 sudo pip install unicornhat
 ```
 
-Then proceed to [python/examples](python/examples).
+**Install from Github clone**
+
+```
+git clone https://github.com/pimoroni/unicorn-hat
+cd unicorn-hat/
+sudo apt-get install python-dev python-setuptools
+cd library/rpi-ws281x
+sudo python setup.py install
+cd ../..
+cd library/UnicornHat
+sudo python setup.py install
+cd ../..
+```
+
+Then proceed to [examples](examples).
 
 ###Using with idle/idle3:
 
-Unicorn HAT needs root to function. Please make sure you start LXTerminal and run idle or idle3 with the "sudo" command like so:
+`unicornhat` needs root access to function. Please make sure you start LXTerminal and run idle or idle3 with the "sudo" command like so:
 
 ```bash
 sudo idle
 ```
 
-##Based Upon rpi_ws281x
+###Documentation & Support
 
-Unicorn HAT is based upon a modified, Pi 2 compatible version of the RPi ws281x Library by Jeremy Garff.
+* Getting started - https://learn.pimoroni.com/tutorial/unicorn-hat/getting-started-with-unicorn-hat
+* Function reference - http://docs.pimoroni.com/unicornhat/
+* GPIO Pinout - http://pinout.xyz/pinout/unicorn_hat, http://pinout.xyz/pinout/unicorn_phat
+* Get help - http://forums.pimoroni.com/c/support
+
+###Based Upon rpi_ws281x
+
+`unicornhat` is based upon a modified, Pi 2/3 compatible version of the RPi ws281x Library by Jeremy Garff.
 
 The library was modified by Richard Hirst.
 
 * Modified version: https://github.com/richardghirst/rpi_ws281x
 * Original: https://github.com/jgarff/rpi_ws281x
 
-##RaspberryPi-NeoPixel-WS2812
+###RaspberryPi-NeoPixel-WS2812
 
-Note: Unicorn HAT is no longer based upon this library, but this information is included for posterity.
+Note: `unicornhat` is no longer based upon this library, but this information is included for posterity.
 
-Unicorn Hat was previously based upon a modified version of the ws2812 C driver from: https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812
+`unicornhat` was previously based upon a modified version of the ws2812 C driver from: https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812
